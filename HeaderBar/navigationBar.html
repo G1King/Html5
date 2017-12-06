@@ -1,0 +1,49 @@
+<div id="navigation-bar">
+    <span class="goBack">
+        <!--load 动态加载页面 在哪加载 填写 相当于哪个页面的路径-->
+        <img src= "./assets/img/goBack.png" alt="">
+    </span>
+    <div id="navigation-title"></div>
+</div>
+<style>
+    #navigation-bar{
+        z-index: 10001;
+        top: 0;
+        width: 100%;
+        height: .87rem;
+        background: #fff;
+        position: fixed;
+        text-align: center;
+        line-height: .87rem;
+        border-bottom: 1px solid #e4e4e4;
+        font-size: .36rem;
+        color: #333333;
+    }
+    .goBack img{
+        width: .21rem;
+        height: .37rem;
+    }
+    #navigation-title {
+        width: 100%;
+        height: 100%;
+        letter-spacing: 1px;
+    }
+    .goBack{
+        display: block;
+        width: .21rem;
+        height: .37rem;
+        position: absolute;
+        left: .3rem;
+        top: .28rem;
+    }
+</style>
+<script>
+    $(function () {
+        $("#navigation-title").text($("title").text());
+
+        $(".goBack").on("click",function () {
+             window.history();
+        })
+    })
+
+</script>
